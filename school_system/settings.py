@@ -29,7 +29,9 @@ SECRET_KEY = 'django-insecure-##ywt-y5d%58+j1*-jkswx4qd=g^(4q())v2gt^u-6eir!belo
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://brendas-schoolsystem.herokuapp.com',
+'localhost',
+'127.0.0.1']
 
 
 # Application definition
