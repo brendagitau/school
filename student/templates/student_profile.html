@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Montserrat:wght@100&display=swap" rel="stylesheet">
+
+    <title>codeHive Registration</title>
+</head>
+<body style="background-color: rgb(211, 209, 209)">
+  {% extends 'base.html' %}
+  {% block content %}
+  <div id="formbody" >
+
+  <div id="imgname">
+  <img id="courses" src="{{ student.image.url }}" width="270px" height="320px" >
+  <h1 style="font-size: 40px;color: rgb(77, 73, 77);;"><span style="font-size: larger; color: purple;"></span>{{student.first_name}} {{student.last_name}}</h1>
+  <hr>
+  
+  <p style="font-size: 20px;color: rgb(77, 73, 77);;"><img id="phone" src="https://e7.pngegg.com/pngimages/204/798/png-clipart-purple-mail-paper-and-email-address-computer-icons-symbol-email-box-gmail-purple-angle-thumbnail.png" width="30px" height="30px"><span style=" color: rgb(233, 7, 233);">Email:</span>{{student.email}}</p>
+  <p style="font-size: 20px;color: rgb(77, 73, 77);;"><img id="phone" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnjzKyWcZwja4UCDNZFbomhhUn-rh_dpaW4WJXz8at9n9Jg-2gxKW6DhlrpaEqzYsC1U0&usqp=CAU"  width="30px" height="30px"><span style="color: rgb(233, 7, 233);">Phone Number:</span>{{student.phone_number}}</p>
+ 
+  </div>
+
+<div class="form" >
+  <p style="font-size: 15px;color: rgb(77, 73, 77);;"><span style=" color: rgb(233, 7, 233);">Gender:</span>{{student.gender}}</p><hr>
+  <p style="font-size: 15px;color: rgb(77, 73, 77);;"><span style=" color: rgb(233, 7, 233);">Student ID:</span>{{student.student_id}}</p><hr>
+  <p style="font-size: 15px;color: rgb(77, 73, 77);;"><span style=" color: rgb(233, 7, 233);">Nationality:</span>{{student.nationality}}</p><hr>
+  <p style="font-size: 15px;color: rgb(77, 73, 77);;"><span style=" color: rgb(233, 7, 233);">Academic Year:</span>{{student.academic_year}}</p><hr>
+  <p style="font-size: 15px;color: rgb(77, 73, 77);;"><span style=" color: rgb(233, 7, 233);">Room Number:</span>{{student.room_number}}</p><hr>
+  <p style="font-size: 15px;color: rgb(77, 73, 77);;"><span style=" color: rgb(233, 7, 233);">Class Name:</span>{{student.class_name}}</p><hr>
+  <p style="font-size: 15px;color: rgb(77, 73, 77);;"><span style=" color: rgb(233, 7, 233);">City:</span>{{student.city}}</p><hr>
+  <p style="font-size: 15px;color: rgb(77, 73, 77);;"><span style="color: rgb(233, 7, 233)">Medical Report:</span><a href="{{student.medical_report.url}}">Download</a></p><hr>
+  <a id="edit" href="{% url 'student:delete_student' student.id %}">Delete</a>
+  <a id="edit" href="{% url 'student:edit_student' student.id %}">Edit</a>
+
+    
+     
+   
+</div>  
+</div>
+      <style>
+        #edit{
+          margin:10px;
+          font-weight: bolder;
+          font-size: 20px;
+          padding: 10px;
+
+          background-color:rgb(238, 233, 205);
+          border: solid 1px ;
+          border-radius: 10px;
+          float: right;
+          text-decoration: none;
+          font-size: 17px;
+          color: rgb(155, 0, 155);  
+          border: solid 1px rgb(231, 202, 71);
+          
+             
+        }
+        #edit:hover{
+             background-color:rgb(239, 191, 243) 
+        }
+          #phone{
+              margin-top: -1%;
+          }
+          p{
+            font-family: 'Montserrat', sans-serif;
+            margin-left: 2%;
+            padding: 2px;
+           
+
+          }
+        #courses{
+       
+          margin-top: 2%;
+          margin-left: 3%;
+          border-radius: 20px;
+        }
+        .pic{
+          height: 25%;
+          margin-top: -7%;
+          width: 35%;
+        }
+        #formbody{
+          background-color: white;
+          display: flex;
+          width: 1000px;
+          font-weight: bold;
+          margin-left: 16%;
+          border-radius: 3%;
+          height: 45%;   
+        }
+        #imgname{
+          margin-left: 3%;
+          margin-top: 3%;
+          width: 50%;
+        }
+        
+          body{
+        background:#fcfafb;
+        background-color: #f8f9d2;
+background-image: linear-gradient(315deg, #f8f9d2 0%, #e8dbfc 74%);
+       
+          }
+          
+          h1{
+           margin-top: 4%;
+          font-weight: bold;
+          font-family: 'Montserrat', sans-serif;
+         
+          
+          }
+          .form{
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bold;
+            font-size: 15px;
+            padding:30px;
+            width:700px;
+            height:auto;
+            overflow:hidden;
+            color: rgb(29, 2, 29);
+            border-radius:20px;
+         
+           
+          }
+          input{
+           width: 98%;
+           outline: none;
+           border: 1px solid rgb(121, 83, 121) ;
+           font-size: 13px;
+           padding: 7px 10px;
+           border-radius: 5px;  
+           font-family: 'Montserrat', sans-serif;
+           font-weight: bold;
+           display: flex;  
+           
+       }
+       #des{
+         height: 1%;
+         width: 98%;
+         font-weight: bold;
+       }
+      
+       
+      </style>
+  {% endblock content %}
+</body>
+</html>
+<!-- first_name = models.CharField(max_length=12) 
+    last_name = models.CharField(max_length=20)
+    age = models.PositiveSmallIntegerField()
+    birth_date =models.DateField()
+    nationality = CountryField()
+    gender = models.CharField(max_length=20, choices = GENDER,default='FEMALE')
+    student_id = models.CharField(max_length=20)
+    phone_number = PhoneNumberField()
+    admission_date =models.DateField()
+    guardian_name = models.CharField(max_length=30)
+    guardian_phone_number = models.CharField(max_length=20)
+    medical_report=models.FileField(upload_to='documents/%Y/%m/%d')
+    room_number = models.PositiveSmallIntegerField(null=True,blank=True)
+    class_name =models.CharField(max_length=20,null=True,blank=True)
+    academic_year = models.PositiveIntegerField(default=current_year(), validators=[MinValueValidator(1984),max_value_current_year])
+    email =models.EmailField()
+    city =models.CharField(max_length=20)
+    image = models.ImageField(upload_to='images/') -->

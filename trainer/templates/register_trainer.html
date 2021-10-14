@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Montserrat:wght@100&display=swap" rel="stylesheet">
+
+    <title> Registration</title>
+</head>
+<body>
+  {% extends 'base.html' %}
+  {% block content %}
+  <div id="formbody">
+    <div class="form">
+      <div style="display: flex;">
+        <img id="headerpic" src="https://cdn3d.iconscout.com/3d/premium/thumb/product-development-2885454-2409422@0.png" width="60%" height="30%" left="-90%" alt="">
+        <h1 style=" font-weight: bold; font-size: 45px;color:rgb(158,163,220);"><br> Trainer Registration</h1>
+      </div>
+      <p style="color: rgb(158,163,220); font-size: 19px;">  Kindly fill in  the Trainer registration form :</p> <hr>
+   
+    <form method="POST" enctype="multipart/form-data"  >
+      {{ form.as_p }}
+      {% csrf_token %}
+        <button type="submit" id="submit"
+        style="background-color: rgb(158,163,220); 
+        color: white;
+        width: 40%;
+        height: 40px;
+         border-radius: 15px; 
+         border-color: rgb(246, 248, 114);
+         font-family: 'Montserrat', sans-serif;
+         font-size: 20px;
+         font-weight: bold;
+         ">
+         SUBMIT</button>
+    </form>
+   
+     
+   
+</div>
+</div>
+      <style>
+       
+          #formbody{
+           
+         display: flex;
+         width: 75%;
+         background-color: white;
+         border-radius:20px ;
+        margin-left: 11%; 
+       } 
+       
+        
+        .pic{
+          width: 40%;
+          margin-bottom: -2%;
+        }
+        
+           body{
+       
+        font-weight: bold;
+        font-family: 'Montserrat', sans-serif;
+        font-size:15px;
+      
+        background-repeat: no-repeat;
+          }
+          h1{
+          font-family: 'Montserrat', sans-serif;
+          margin-top: 4%;
+          }
+          .form{
+            margin:4% auto 0 auto;
+            padding:30px;
+            width:800px;
+            height:auto;
+            overflow:hidden;
+            border-radius:20px; 
+          }
+          .form_control{
+           width: 98%;
+           outline: none;
+           border: 2px solid rgb(158,163,220) ;
+           font-size: 13px;
+           padding: 8px 10px;
+           border-radius: 15px;  
+           font-family: 'Montserrat', sans-serif;
+           font-weight: bold; 
+           display: flex;  
+       }
+       #gender{
+         background-color: white;
+         width: 98%;
+         height: auto;
+       }
+       .submit{
+        background-color: rgb(158,163,220); 
+        color: white;
+        width: 40%;
+        height: 40px;
+         border-radius: 15px; 
+         border-color: rgb(246, 248, 114);
+         font-family: 'Montserrat', sans-serif;
+         font-size: 20px;
+         font-weight: bold;
+       }
+       .submit:hover{
+        background-color:rgb(160, 172, 2) ;
+       }
+     
+      </style>
+    {% endblock content %}    
+</body>
+</html>

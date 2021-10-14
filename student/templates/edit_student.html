@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>codeHive Registration</title>
+</head>
+<body>
+  {% extends 'base.html' %}
+  {% block content %}
+  <div id="formbody">
+    <div class="form">
+       <div style="display: flex;">
+      <img id="headerpic" src="https://cdn3d.iconscout.com/3d/premium/thumb/woman-working-at-desk-3580607-2992398.png" width="30%" height="10%" left="30%" alt="">
+      <h1 style=" font-weight: bold; font-size: 45px;color: rgb(233, 7, 233);"><br> Student Registration</h1>
+    </div>
+  
+
+   
+    <form  id="theform" method="POST"  enctype="multipart/form-data"  >
+     <p style="color:rgb(233, 7, 233); font-size: 19px;">  Registration Details:</p> <hr>
+      {{ form.as_p }}
+      {% csrf_token %}
+       <button  type="submit" 
+        style="background-color: rgba(233, 7, 233, 0.787); 
+        color: white;
+        width: 40%;
+        height: 40px;
+        margin-left:30%;
+        margin-right: 50%;
+         border-radius: 15px; 
+         border-color: rgba(141, 132, 6, 0.171);
+         font-family: 'Montserrat', sans-serif;
+         font-size: 20px;
+         font-weight: bold;">
+         SUBMIT</button>
+    </form>
+</div>
+</div>
+      <style>
+        #headerpic{
+          
+          margin-left: -3%;
+          margin-top: 10%;
+        }
+      
+       
+        .pic{
+          margin-bottom: -7%;
+          width: 40%;
+        }
+        select{
+           width: 80%;
+           border: 1px solid rgb(160, 172, 2);
+           font-size: 15px;
+           padding: 8px 10px;
+           border-radius: 5px; 
+           
+       }
+       select:hover{
+             background-color:rgb(160, 172, 2) ;
+       }
+          
+          h1{
+            font-family: 'Montserrat', sans-serif;
+            margin-top: 12%;
+           
+          
+          }
+          .form{
+            font-weight: bold;
+            margin:1% auto 0 auto;
+            padding:10px;
+            width:800px;
+            height:auto;
+            overflow:hidden;
+            border-radius:10px;
+            font-weight: bolder;
+            font-family: 'Montserrat', sans-serif;
+           
+            
+            
+          }
+          input{
+           width: 100%;
+           outline: none;
+           border: 1px solid rgb(160, 172, 2) ;
+           font-size: 15px;
+           padding: 6px 10px;
+           border-radius: 15px; 
+           font-weight: bold;
+          
+       }
+       
+       #nationality{
+        background-color: white;
+        width: 98.5%;
+
+       }
+       #gender{
+        background-color: white;
+        width: 98.5%;
+
+       }
+       #formbody{
+         
+    
+         width: 75%;
+         background-color: white;
+         border-radius:20px ;
+         margin-left: 11%;
+      
+         
+         
+       }
+       
+
+
+
+       
+      </style>
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet"><link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Montserrat:wght@100&display=swap" rel="stylesheet">
+  {% endblock content %}
+</div>
+</body>
+</html>
