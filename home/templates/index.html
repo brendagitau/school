@@ -26,9 +26,9 @@
     
 
   <h1 style="margin-left: 15%; font-weight: bold; font-family: 'Montserrat', sans-serif;
-  margin-top: -3%;font-size: 45px;color: purple;">
-  Welcome to codeHive</h1>
-  <img id="courses" src="https://www.alshafak.com/wp-content/uploads/2021/03/32.jpeg">
+  margin-top: -3%;font-size: 50px;color: rgb(233, 7, 233);">
+  Welcome to AkiraChix !</h1>
+  <img id="courses" src="https://i.pinimg.com/564x/96/19/71/9619713e149cca64fe039371340d436b.jpg">
  
 </div>
 
@@ -37,12 +37,12 @@
    
     
       <h1 style="font-weight: bold; font-family: 'Montserrat', sans-serif;
-      margin-top: -3%; font-size: 25px;color: rgb(46, 9, 106);">View Registered Entities:</h1>
+      margin-top: -3%; font-size: 25px;color: rgb(233, 7, 233);">See registered members ,courses and events:</h1>
       
-     <h1><a id="link" href="{% url 'student:student_list' %}"> {{ students }} codeHive Students </a></h1>
-     <h1><a id="link" href="{% url 'trainer:trainer_list' %}">{{ trainers }} codeHive Trainers</a></h1>
-     <h1><a id="link" href="{% url 'course:course_list' %}">{{ courses }} codeHive Courses</a></h1>
-     <h1><a id="link" href="{% url 'events:calendar' %}">{{ events }} codeHive Events</a></h1>
+     <h1><a id="link" href="{% url 'student:student_list' %}"> {{ students }}  Students </a></h1>
+     <h1><a id="link" href="{% url 'trainer:trainer_list' %}">{{ trainers }}  Trainers</a></h1>
+     <h1><a id="link" href="{% url 'course:course_list' %}">{{ courses }}  Courses</a></h1>
+     <h1><a id="link" href="{% url 'events:calendar' %}">{{ events }}  Events</a></h1>
      
   
 </div>
@@ -54,11 +54,12 @@
           #link{
            
          padding: 10px;
-         background-color: purple;
-         color: white;
+         background-color: white;
+         color:rgb(233, 7, 233);
          height: 40px;
          width: 300px;
-         border-radius: 10px; 
+         border-radius: 10px;
+         border: solid 1px rgb(231, 202, 71);
          margin-left: 20%;
          margin-top: 10%;
          font-size: 20px;
@@ -68,6 +69,10 @@
        
          
           }
+          #link:hover{
+             background-color:rgb(238, 233, 205) ;
+            
+         }
         #courses{
           width: 120%;
           margin-top: -2%;
